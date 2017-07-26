@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+
+a {
+	line-height: 15px;
+}
+
+a:hover {
+	font-size: 15px;
+	color: orange;
+}
+
+a:active {
+	color: red;
+}
+
+</style>
+</head>
+<body>
+<h1>Movie</h1>
+<hr />
+<h3>MP4直接播放</h3>
+<p><a href="I://BJ单身日记3：BJ的孩子.mp4">BJ单身日记3：BJ的孩子</a>  <br />
+<a href="I://ssy的剑.mp4">三少爷的剑</a><br />
+<a href="I://阿甘正传[英语原声版]_bd.mp4">阿甘正传</a><br />
+<a href="I://触不可及_bd.mp4">触不可及</a>  <br />
+<a href="I://疯狂动物城[英语原声版]v2_bd.mp4">疯狂动物城</a><br />
+<a href="I://火柴人_bd.mp4">火柴人</a><br />
+<a href="I://佩小姐的奇HC堡.mp4">佩小姐的奇幻城堡</a><br />
+<a href="I://天使爱美丽_bd.mp4">天使爱美丽</a></p>
+<h6>大话王</h6>
+<p><a href="I://大话王//大话王_01.mp4">大话王01</a>  <br />
+<a href="I://大话王//大话王_02.mp4">大话王02</a>  <br />
+<a href="I://媒体//该si的歌德.2013.BD.German.MiniSD-TLF.mp4">该死的歌德</a>  
+</p>
+<h3>电视剧</h3>
+<h5>人间正道是沧桑</h5>
+<p><a href="I://人间正道是沧桑">人间正道是沧桑全集</a>  
+</p>
+<p><a href="I://人间正道是沧桑//人间正道是沧桑第1集.MP4">人间正道是沧桑01</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第2集.MP4">人间正道是沧桑02</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第3集.MP4">人间正道是沧桑03</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="I://人间正道是沧桑//人间正道是沧桑第4集.MP4">人间正道是沧桑04</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第5集.MP4">人间正道是沧桑05</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第6集.MP4">人间正道是沧桑06</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第7集.MP4">人间正道是沧桑07</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第8集.MP4">人间正道是沧桑08</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第9集.MP4">人间正道是沧桑09</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第10集.MP4">人间正道是沧桑10</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第11集.MP4">人间正道是沧桑11</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第12集.MP4">人间正道是沧桑12</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第13集.MP4">人间正道是沧桑13</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第14集.MP4">人间正道是沧桑14</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第15集.MP4">人间正道是沧桑15</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第16集.MP4">人间正道是沧桑16</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第17集.MP4">人间正道是沧桑17</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第18集.MP4">人间正道是沧桑18</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第19集.MP4">人间正道是沧桑19</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第20集.MP4">人间正道是沧桑20</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第21集.MP4">人间正道是沧桑21</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第22集.MP4">人间正道是沧桑22</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第23集.MP4">人间正道是沧桑23</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第24集.MP4">人间正道是沧桑24</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第25集.MP4">人间正道是沧桑25</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第26集.MP4">人间正道是沧桑26</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第27集.MP4">人间正道是沧桑27</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第28集.MP4">人间正道是沧桑28</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第29集.MP4">人间正道是沧桑29</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第30集.MP4">人间正道是沧桑30</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第31集.MP4">人间正道是沧桑31</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第32集.MP4">人间正道是沧桑32</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第33集.MP4">人间正道是沧桑33</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第34集.MP4">人间正道是沧桑34</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第35集.MP4">人间正道是沧桑35</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第36集.MP4">人间正道是沧桑36</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第37集.MP4">人间正道是沧桑37</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第38集.MP4">人间正道是沧桑38</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第39集.MP4">人间正道是沧桑39</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第40集.MP4">人间正道是沧桑40</a> <br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第41集.MP4">人间正道是沧桑41</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第42集.MP4">人间正道是沧桑42</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第43集.MP4">人间正道是沧桑43</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第44集.MP4">人间正道是沧桑44</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第45集.MP4">人间正道是沧桑45</a><br />
+<a href="I://人间正道是沧桑//人间正道是沧桑第46集.MP4">人间正道是沧桑46</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="I://人间正道是沧桑//人间正道是沧桑第47集.MP4">人间正道是沧桑47</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="I://人间正道是沧桑//人间正道是沧桑第48集.MP4">人间正道是沧桑48</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第49集.MP4">人间正道是沧桑49</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="I://人间正道是沧桑//人间正道是沧桑第50集.MP4">人间正道是沧桑50</a>  
+</p>
+<h5>武林外传</h5>
+<p><a href="I://媒体//武林外传全集">武林外传全集</a>  
+</p>
+<h3>BHD暴风，下载播放</h3>
+<h5>大卫戈尔的一生</h5>
+<p><a href="I://大卫戈尔的一生//大卫戈尔的一生_01.bhd">大卫戈尔的一生_01</a>  <br />
+<a href="I://大卫戈尔的一生//大卫戈尔的一生_02.bhd">大卫戈尔的一生_02</a>  <br />
+<a href="I://大卫戈尔的一生//大卫戈尔的一生_03.bhd">大卫戈尔的一生_03</a>  
+</p>
+<h5>放牛班的春天</h5>
+<p><a href="I://放牛班的春天//放牛班的春天_01.bhd">放牛班的春天_01</a><br />
+<a href="I://放牛班的春天//放牛班的春天_02.bhd">放牛班的春天_02</a>  
+</p>
+<h5>龙猫</h5>
+<p><a href="I://龙猫//龙猫_01.bhd">龙猫_01</a> <br />
+<a href="I://龙猫//龙猫_02.bhd">龙猫_02</a> </p>
+<h5>穆赫兰道</h5>
+<p><a href="I://穆赫兰道//穆赫兰道_01.bhd">穆赫兰道_01</a><br />
+<a href="I://穆赫兰道//穆赫兰道_02.bhd">穆赫兰道_02</a><br />
+<a href="I://穆赫兰道//穆赫兰道_03.bhd">穆赫兰道_03</a>  
+</p>
+<h5>千与千寻</h5>
+<p><a href="I://千与千寻//千与千寻_01.bhd">千与千寻_01</a><br />
+<a href="I://千与千寻//千与千寻_02.bhd">千与千寻_02</a>  
+</p>
+<h5>千与千寻的神隐</h5>
+<p><a href="I://千与千寻的神隐//千与千寻的神隐_01.bhd">千与千寻的神隐_01</a><br />
+<a href="I://千与千寻的神隐//千与千寻的神隐_02.bhd">千与千寻的神隐_02</a></p>
+<h5>生死停留</h5>
+<p><a href="I://生死停留//生死停留.bhd">生死停留</a></p>
+<h5>天空之城</h5>
+<p><a href="I://天空之城//天空之城_01.bhd">天空之城_01</a><br />
+<a href="I://天空之城//天空之城_02.bhd">天空之城_02</a> </p>
+<h5>夜访吸血鬼</h5>
+<p><a href="I://夜访吸血鬼//夜访吸血鬼_01.bhd">夜访吸血鬼_01</a><br />
+<a href="I://夜访吸血鬼//夜访吸血鬼_02.bhd">夜访吸血鬼_02</a>  
+</p>
+<h3>百度云盘</h3>
+<p><a href="http://pan.baidu.com/s/1c2cUFPA">星际穿越</a>  <br />
+<a href="http://pan.baidu.com/s/1o8x9h7k">人间正道是沧桑</a> <br />
+<a href="http://pan.baidu.com/s/1o7EnOAQ">狼的孩子雨和雪</a><br />
+<a href="http://pan.baidu.com/s/1pLnxH7H">黑暗侵袭</a><br />
+<a href="http://pan.baidu.com/s/1gfrbRrH">撕裂人</a><br />
+<a href="http://pan.baidu.com/s/1kV1IYof">吸血鬼日记1-8季</a>  <br />
+<a href="http://pan.baidu.com/s/1nuPftBN">鬼吹灯</a><br />
+<a href="http://pan.baidu.com/s/1boR13GV">のんのんびょり</a>  
+</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

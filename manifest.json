@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2, //固定的 
+  "version": "1.0.2", //版本号
+  "name": "BannerForbid", //插件名称 
+  "description": "BannerForbid",//插件的描述 
+  "browser_action": {//插件加载后生成图标 
+    "default_icon": "CAT_icon.png", // 插件图标
+    "default_popup":"popup.html" //点击图标，出现弹窗显示插件信息  //单击图标执行的文件 
+    //"default_title":"Hello CC", //鼠标移到图标显示的文字  
+  },
+  "permissions": [ //允许插件访问的url 
+    "https://www.baidu.com/*"
+  ],
+  "background": {//background script即插件运行的环境 
+  	  "page":"background.html" //  ----yu与下面两者摄其一
+   // "scripts": ["background.js"]//数组.chrome会在扩展启动时自动创建一个包含所有指定脚本的页面 
+  },
+  "content_scripts": [ //对页面内容进行操作的脚本 
+    {
+      "matches": ["https://*/*"], //满足什么条件执行该插件
+      "js": ["js/jquery.marquee.min.js","BannerForbid.js"],
+      "run_at": "document_end",//在document加载时执行该脚本 document_start   document_end
+      "all_frames": true
+    }
+  ]
+}
